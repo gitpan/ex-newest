@@ -6,6 +6,7 @@ BEGIN {
 use Test::Simple tests => 2;
 use ex::newest;
 use lib 'a';
-use Getopt::Long;
-ok( $Getopt::Long::VERSION > 0.001, 'Newer Getopt::Long loaded' );
-ok( (grep m!Getopt/Long/autosplit.ix!, keys %INC), 'autosplit index loaded' );
+# Try to load a faked Storable (because Storable uses AutoLoader)
+use Storable;
+ok( $Storable::VERSION > 0.001, 'Newer Storable loaded' );
+ok( (grep m!Storable/autosplit.ix!, keys %INC), 'autosplit index loaded' );

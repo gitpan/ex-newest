@@ -1,4 +1,4 @@
-ex::newest version 0.01
+ex::newest version 0.02
 =======================
 
 An experimental pragma that modifies the behavior of 'use' and 'require'

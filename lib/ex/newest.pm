@@ -16,7 +16,7 @@ no warnings 'redefine';
 
 use ExtUtils::MM_Unix;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub ex::newest::INC {
     my ($self, $file) = @_;
